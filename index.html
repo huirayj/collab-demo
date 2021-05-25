@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <title>API mini-project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Server API mini-project</title>
 </head>
 
-<bod class="row">
-    <!-- nav/aside to search through API -->
-    <aside class="row col-3">
-        <div class="input-group mb-3 col-12">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-            </div>
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title">
+      Library of Congress Search Engine
+    </h1>
+  </header>
+
+
+  <main class="row">
+    <div class="col-12 col-md-4">
+
+      <div class="card">
+        <h3 class="card-header">Search</h3>
+        <form id="user-form" class="card-body ">
+          <label class="form-label" for="search-bar"></label>
+          <input name="search-bar" id="search-bar" type="text" autofocus="true" class="form-input" />
+          <button type="submit" class="btn-dark">Go!</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search By Topic</h3>
+        <div id="format-buttons" class="card-body">
+          <button data-format="maps" class="btn-dark col-12">Maps</button>
+          <button data-format="html" class="btn-dark col-12">Audio</button>
+          <button data-format="manuscripts" class="btn-dark col-12">Manuscripts</button>
+          <button data-format="newspapers" class="btn-dark col-12">Newspapers</button>
+          <button data-format="notated-music" class="btn-dark col-12">Sheet Music</button>
+          <button data-format="film-and-videos" class="btn-dark col-12">Film and Video</button>
+          <button data-format="websites" class="btn-dark col-12">Websites</button>
         </div>
-        <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
-            </a>
-          
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-        </div>
-
-    </aside>
-    <!-- API data appends to here -->
-    <div class="col-8">
-        <p>Pikachu ipsum dolor sit amet charmander mollit culpa, sunt seaking eu ad clefable veniam. Charmander fugiat caterpie quis. Laborum kakuna dragonair laboris butterfree gloom machop quis in jigglypuff enim cubone. Abra hitmonchan esse excepteur raichu. Officia fugiat jigglypuff, vulpix et incididunt chansey reprehenderit aliqua eu venusaur. Voltorb ex zubat sed commodo cupidatat, anim aliquip laboris aute kabutops eu alakazam dolore exercitation. Sunt porygon omanyte reprehenderit, weezing labore electrode deserunt.
-
-            Weedle charmeleon ivysaur ea incididunt moltres. Ad et occaecat deserunt, clefable exercitation non aerodactyl qui adipisicing hitmonlee. Consectetur fugiat abra, voluptate cupidatat bellsprout fugiat ea venusaur sint raichu enim nostrud exercitation veniam. Jolteon jynx aliqua, bellsprout consequat culpa cupidatat aute. Dolore irure kabutops mewtwo.
-            
-            Mewtwo proident seel aute tauros, nisi enim non voluptate. Incididunt blastoise pidgey, elit mew clefairy exercitation nidoking dewgong. Consequat ut electabuzz ex. Tentacool in laboris slowbro culpa, diglett moltres nidorina. Labore haunter tempor, ponyta quis laboris cillum ivysaur ad psyduck eiusmod. Snorlax parasect ut oddish ivysaur Mr. Mime.
-            
-            Ut mollit oddish scyther kabutops irure jigglypuff. Nostrud adipisicing exercitation machop flareon farfetchd. Nidoran enim reprehenderit in nisi spearow nisi ut eu. Magikarp magnemite qui, nulla sed quis aliquip dragonair metapod. Eiusmod non incididunt jolteon sint zapdos laboris pidgey ut bellsprout id ut ex lapras.
-            
-            Pikachu ipsum dolor sit amet charmander mollit culpa, sunt seaking eu ad clefable veniam. Charmander fugiat caterpie quis. Laborum kakuna dragonair laboris butterfree gloom machop quis in jigglypuff enim cubone. Abra hitmonchan esse excepteur raichu. Officia fugiat jigglypuff, vulpix et incididunt chansey reprehenderit aliqua eu venusaur. Voltorb ex zubat sed commodo cupidatat, anim aliquip laboris aute kabutops eu alakazam dolore exercitation. Sunt porygon omanyte reprehenderit, weezing labore electrode deserunt.
-
-            Weedle charmeleon ivysaur ea incididunt moltres. Ad et occaecat deserunt, clefable exercitation non aerodactyl qui adipisicing hitmonlee. Consectetur fugiat abra, voluptate cupidatat bellsprout fugiat ea venusaur sint raichu enim nostrud exercitation veniam. Jolteon jynx aliqua, bellsprout consequat culpa cupidatat aute. Dolore irure kabutops mewtwo.
-
-            Mewtwo proident seel aute tauros, nisi enim non voluptate. Incididunt blastoise pidgey, elit mew clefairy exercitation nidoking dewgong. Consequat ut electabuzz ex. Tentacool in laboris slowbro culpa, diglett moltres nidorina. Labore haunter tempor, ponyta quis laboris cillum ivysaur ad psyduck eiusmod. Snorlax parasect ut oddish ivysaur Mr. Mime.
-
-            Ut mollit oddish scyther kabutops irure jigglypuff. Nostrud adipisicing exercitation machop flareon farfetchd. Nidoran enim reprehenderit in nisi spearow nisi ut eu. Magikarp magnemite qui, nulla sed quis aliquip dragonair metapod. Eiusmod non incididunt jolteon sint zapdos laboris pidgey ut bellsprout id ut ex lapras.
-
-            </p>
+      </div>
     </div>
+
+    <div class="col-12 col-md-8">
+      <h2 class="subtitle">Showing Repositories for: <span id="repo-search-term"></span></h2>
+      <div id="repos-container" class="list-group"></div>
+    </div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
