@@ -2,7 +2,7 @@
     --primary: #5cacd1;
     --secondary: #6db88c;
     --tertiary: #b2b8b8;
-    --light-dark: #e68c73;
+    --light-red: #e68c73;
     --border-radius:0.5rem;
 }
 
@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--dark);
+    color: var(--light-red);
     line-height: 1.5;
     font-size: 5rem;
 }
@@ -30,7 +30,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    color: var(--dark);
+    color: var(--light-red);
     line-height: 1.55;
     font-weight: 500;
 }
@@ -76,7 +76,7 @@ h6 {
     color: var(--primary);
     border: none;
     outline: none;
-    background-color: var(--light-dark);
+    background-color: var(--light-red);
     box-shadow: 3px 3px var(--secondary);
     transform: translate(-1px, -1px);
     display: inline-block;
@@ -91,7 +91,7 @@ h6 {
     color: var(--primary);
     background-color: var(--tertiary);
     transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+    box-shadow: 2px 2px var(--light-red);
   }
   
   .hero {
@@ -103,8 +103,6 @@ h6 {
   .hero p {
     max-width: 75%;
   }
-  
-  
   
   .list-group {
     padding: 0;
@@ -132,14 +130,13 @@ h6 {
   }
   
   .icon-danger {
-    color: rgb(255, 70, 70);
+    color: rgb(206, 10, 10);
   }
   
   .icon-success {
-    color: rgb(29, 153, 255);
+    color: rgb(29, 255, 29);
   }
   
-  /* CARDS */
   .card {
     margin: 0 0 20px 0;
     border: 3px solid var(--dark);
@@ -157,7 +154,6 @@ h6 {
     padding: 2.5%;
   }
   
-  /* FORM */
   .form-label,
   .form-input,
   .form-textarea {
@@ -174,11 +170,10 @@ h6 {
     padding: 3%;
     margin: 5px 0;
     font-size: 1.2rem;
-    border: 2px solid var(--light-dark);
+    border: 2px solid var(--light-red);
     border-radius: var(--border-radius);
   }
   
-  /* HEIGHT / WIDTH UTILS */
   .min-100-vh {
     min-height: 100vh;
   }
@@ -187,12 +182,11 @@ h6 {
     min-width: 100vw;
   }
   
-  /* FONT UTILS */
   .text-uppercase {
     text-transform: uppercase;
   }
   
-  /* FLEX CONTENT */
+ 
   .flex-row {
     display: flex;
     flex-wrap: wrap;
