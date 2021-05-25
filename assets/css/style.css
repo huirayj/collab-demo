@@ -1,5 +1,5 @@
 :root {
-    --primary: #5cacd1;
+    --primary: #5dc3f3;
     --secondary: #6db88c;
     --tertiary: #b2b8b8;
     --light-red: #e68c73;
@@ -20,7 +20,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--light-red);
     line-height: 1.5;
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 h1,
@@ -32,7 +32,7 @@ h6 {
     margin: 0;
     color: var(--light-red);
     line-height: 1.55;
-    font-weight: 500;
+    font-weight: 400;
 }
   
   main {
@@ -51,20 +51,21 @@ h6 {
     width: 100%;
     display: block;
     margin: 5px 0;
-    border-radius: var(--border-radius);
+    border-radius: 5px 5px 0 0;
     color: var(--primary);
     border: none;
     outline: none;
     background-color: var(--light-dark);
     box-shadow: 3px 3px var(--dark);
     transform: translate(-1px, -1px);
+
   }
   
   .btn:hover {
     color: var(--primary);
     background-color: var(--tertiary);
     transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+    box-shadow: 2px 2px var(--tertiary);
   }
   
   .btn-inline {
@@ -96,7 +97,7 @@ h6 {
   
   .hero {
     padding: 3% 4%;
-    background-color: var(--dark);
+    background-color: var(--light);
     color: var(--primary);
   }
   
